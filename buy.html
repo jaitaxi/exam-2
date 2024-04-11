@@ -71,8 +71,9 @@
 </body>
 
 <script>
-    // let cart = []
+   
     let books = JSON.parse(localStorage.getItem('selectedBook')) || []
+    let cart=JSON.parse(localStorage.getItem('selectedBook')) || []
     console.log("books", books);
 
     // uishow
@@ -98,7 +99,7 @@
             let buy = document.createElement("button");
             buy.innerHTML = "Process to buy the book"
             buy.addEventListener("click", () => {
-                cart.push(ele)
+                cart.push(ele);
                 localStorage.setItem("selectedBook", JSON.stringify(cart));
             });
 
